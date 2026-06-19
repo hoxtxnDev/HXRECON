@@ -1,6 +1,6 @@
 [build-system]
 requires = ["setuptools>=64"]
-build-backend = "setuptools.backends._legacy:_Backend"
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "hxrecon"
@@ -10,7 +10,7 @@ readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.10"
 authors = [
-    {name = "HXRECON Team"},
+    {name = "@hoxtxnDev"},
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -31,8 +31,8 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/anomalyco/hxrecon"
-Repository = "https://github.com/anomalyco/hxrecon"
+Homepage = "https://github.com/hoxtxnDev/hxrecon"
+Repository = "https://github.com/hoxtxnDev/hxrecon"
 
 [project.scripts]
 hxrecon = "hxrecon.cli.entrypoint:main"
