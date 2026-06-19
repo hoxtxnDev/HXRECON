@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "hxrecon"
+version = "1.0.0"
+description = "Professional-grade concurrent network reconnaissance suite in pure Python"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "HXRECON Team"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+    "Topic :: System :: Networking",
+]
+dependencies = [
+    "rich>=13.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/anomalyco/hxrecon"
+Repository = "https://github.com/anomalyco/hxrecon"
+
+[project.scripts]
+hxrecon = "hxrecon.cli.entrypoint:main"
+
+[tool.setuptools.packages.find]
+include = ["hxrecon*"]

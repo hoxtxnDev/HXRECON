@@ -1,0 +1,33 @@
+# Python __cache__
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Distribution
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Output reports (user-generated, not source)
+hxrecon_output/
+
+# Environment
+.env
+*.log
