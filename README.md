@@ -96,6 +96,38 @@ pip install -e .
 pip install rich
 ```
 
+### 🔧 Nota para Windows / Windows Note
+
+> **ES:** Tras `pip install -e .`, el comando `hxrecon` se instala en el directorio `Scripts` de Python, el cual **puede no estar en tu PATH**. Si `hxrecon` no es reconocido como comando, tienes dos opciones:
+>
+> **Opción A (recomendada):** Agrega el directorio `Scripts` a tu PATH:
+> ```powershell
+> # En PowerShell (una sola vez)
+> $scripts = (python -c "import sys; import os; print(os.path.join(sys.base_exec_prefix, 'Scripts'))")
+> [Environment]::SetEnvironmentVariable("Path", "$env:Path;$scripts", "User")
+> # Abre una nueva terminal para que el cambio surta efecto
+> ```
+>
+> **Opción B (alternativa):** Usa el módulo directamente:
+> ```bash
+> python -m hxrecon.cli.entrypoint scan -t 10.0.0.1 -p 22,80
+> ```
+>
+> **EN:** After `pip install -e .`, the `hxrecon` command is installed in Python's `Scripts` directory, which **may not be in your PATH**. If `hxrecon` is not recognized, you have two options:
+>
+> **Option A (recommended):** Add the `Scripts` directory to your PATH:
+> ```powershell
+> # In PowerShell (one-time setup)
+> $scripts = (python -c "import sys; import os; print(os.path.join(sys.base_exec_prefix, 'Scripts'))")
+> [Environment]::SetEnvironmentVariable("Path", "$env:Path;$scripts", "User")
+> # Open a new terminal for the change to take effect
+> ```
+>
+> **Option B (alternative):** Run the module directly:
+> ```bash
+> python -m hxrecon.cli.entrypoint scan -t 10.0.0.1 -p 22,80
+> ```
+
 ---
 
 ## 🚀 Uso / Usage

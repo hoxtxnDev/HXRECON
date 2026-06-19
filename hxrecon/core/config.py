@@ -166,6 +166,7 @@ class CVEConfig:
     """
     service: str = ""
     version: str = ""
+    api_key: Optional[str] = None
 
 
 @dataclass
